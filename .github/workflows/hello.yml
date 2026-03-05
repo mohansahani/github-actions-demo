@@ -2,8 +2,7 @@ name: Hello
 env:
   USER: "Mohan"
 on: 
-  push:
-    branches: [main]
+  workflow_dispatch: 
   
 jobs:
   greet:
