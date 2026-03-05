@@ -11,16 +11,19 @@ jobs:
       - name: Code Commit
         run: echo "Code Commit done"
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Code Build
         run: echo "Code Build done"
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Code Test
         run: echo "Code testing done"
   deploy:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
       - name: Code Deploy
