@@ -1,1 +1,24 @@
+name: CICD
 
+on:
+  workflow_dispatch:
+
+jobs:
+
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        run: echo "Code clone from Github"
+  build:
+    steps:
+      - name: container build
+        run: echo "Container building done"
+  test:
+    steps:
+      - name: code testing
+        run: echo "Testing the code"
+  deploy:
+    steps:
+      - name: deployment of code
+        run: echo "Deployment success"
