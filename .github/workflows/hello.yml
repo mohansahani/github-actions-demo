@@ -1,8 +1,10 @@
 name: Hello
-
+env:
+  USER: "Mohan"
 on: 
   push:
     branches: [main]
+  
 jobs:
   greet:
     runs-on: ubuntu-latest
