@@ -33,6 +33,7 @@ jobs:
       - name: Code Test
         run: echo "Code testing done"
   deploy:
+    if: inputs.environments == 'dev'
     needs: [build,test]
     runs-on: ubuntu-latest
     steps:
