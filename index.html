@@ -1,1 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Cloud Engineer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#1d2671,#c33764);
+min-height:100vh;
+color:white;
+overflow-x:hidden;
+}
+
+/* Navigation */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+nav h2{
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f2ff;
+}
+
+/* Hero */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+}
+
+.glass{
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+padding:50px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 8px 32px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.glass:hover{
+transform:translateY(-10px) scale(1.02);
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#00f2ff;
+}
+
+.hero p{
+opacity:0.8;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 30px;
+border-radius:30px;
+background:#00f2ff;
+color:#000;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00f2ff;
+}
+
+/* Sections */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+font-size:2rem;
+}
+
+/* Skills */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.skill-card{
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.15);
+transition:0.4s;
+text-align:center;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,255,255,0.4);
+}
+
+/* Projects */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project-card{
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.15);
+transition:0.4s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(255,255,255,0.3);
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin-bottom:20px;
+opacity:0.8;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:30px;
+opacity:0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>MyPortfolio</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="glass">
+
+<h1>Hello, I'm <span>Your Name</span></h1>
+
+<p>
+Cloud Engineer | AWS | Python Automation | DevOps Enthusiast
+</p>
+
+<a href="#projects" class="btn">View My Work</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="glass">
+
+<p>
+I am a cloud enthusiast with strong expertise in AWS, automation, and infrastructure management.  
+I enjoy building scalable systems, automating cloud operations, and designing efficient architectures.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill-card">
+<h3>AWS Cloud</h3>
+<p>IAM, EC2, S3, Lambda, CloudFormation</p>
+</div>
+
+<div class="skill-card">
+<h3>Automation</h3>
+<p>Python, Boto3, Infrastructure Scripts</p>
+</div>
+
+<div class="skill-card">
+<h3>DevOps</h3>
+<p>CI/CD, Docker, Monitoring</p>
+</div>
+
+<div class="skill-card">
+<h3>Security</h3>
+<p>IAM Governance, Cloud Security</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>AWS IAM Automation</h3>
+<p>Automated unused IAM role detection and cleanup using Python and Boto3.</p>
+</div>
+
+<div class="project-card">
+<h3>Cloud Cost Optimizer</h3>
+<p>Scripts that analyze AWS usage and recommend cost optimization.</p>
+</div>
+
+<div class="project-card">
+<h3>Infrastructure Deployment</h3>
+<p>Automated AWS infrastructure using Infrastructure-as-Code.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="glass contact">
+
+<p>Interested in collaborating or working together?</p>
+
+<a class="btn" href="mailto:youremail@example.com">Email Me</a>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Your Name | Portfolio</p>
+</footer>
+
+</body>
+</html>
